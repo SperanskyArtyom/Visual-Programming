@@ -1,130 +1,132 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="css/style.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Flexbox</title>
+        <title>Flexbox properties</title>
     </head>
     <body>
         <header>
             <h1>Примеры работы свойств flexbox'а</h1>
         </header>
-        <aside>
-            <nav>
-                <a href="#flex-direction">Свойство flex-direction</a>
-                <a href="#flex-wrap">Свойство flex-wrap</a>
-                <a href="#justify-content">Свойство justify-content</a>
-            </nav>
-        </aside>
         <main>
-            <section id="flex-direction">
-                <h2>Flex-direction</h2>
-                <article>
-                    <h3>flex-direction: row</h3>
-                    <div>
-                        <div><p>Start</p><div>
-                        <div><p>Item 1</p><div>
-                        <div><p>Item 2</p><div>
-                        <div><p>Item 3</p><div>
-                        <div><p>End</p><div>
-                    </div>
-                </article>
-                <article>
-                    <h3>flex-direction: row-reverse</h3>
-                    <div>
-                        <div><p>Start</p><div>
-                        <div><p>Item 1</p><div>
-                        <div><p>Item 2</p><div>
-                        <div><p>Item 3</p><div>
-                        <div><p>End</p><div>
-                    </div>
-                </article>
-                <article>
-                    <h3>flex-direction: column</h3>
-                    <div>
-                        <div><p>Start</p><div>
-                        <div><p>Item 1</p><div>
-                        <div><p>Item 2</p><div>
-                        <div><p>Item 3</p><div>
-                        <div><p>End</p><div>
-                    </div>
-                </article>
-                <article><h3>flex-direction: column-reverse</h3>
-                    <div>
-                        <div><p>Start</p><div>
-                        <div><p>Item 1</p><div>
-                        <div><p>Item 2</p><div>
-                        <div><p>Item 3</p><div>
-                        <div><p>End</p><div>
-                    </div></article>
-            </section>
-            <section id="flex-wrap">
-                <h2>Flex-wrap</h2>
-                <article>
-                    <h3>flex-wrap: nowrap</h3>
-                    <div>
-                        <div><p>Start</p><div>
-                        <div><p>Item 1</p><div>
-                        <div><p>Item 2</p><div>
-                        <div><p>Item 3</p><div>
-                        <div><p>End</p><div>
-                    </div>
-                </article>
-                <article>
-                    <h3>flex-wrap: wrap</h3>
-                    <div>
-                        <div><p>Start</p><div>
-                        <div><p>Item 1</p><div>
-                        <div><p>Item 2</p><div>
-                        <div><p>Item 3</p><div>
-                        <div><p>End</p><div>
-                    </div>
-                </article>
-                <article>
-                    <h3>flex-wrap: wrap-reverse</h3>
-                    <div>
-                        <div><p>Start</p><div>
-                        <div><p>Item 1</p><div>
-                        <div><p>Item 2</p><div>
-                        <div><p>Item 3</p><div>
-                        <div><p>End</p><div>
-                    </div>
-                </article>
+            <aside>
+                <nav>
+                    <a href="#flex-direction">Свойство flex-direction</a>
+                    <a href="#flex-wrap">Свойство flex-wrap</a>
+                    <a href="#justify-content">Свойство justify-content</a>
+                </nav>
+            </aside>
+            <div class="content-wrapper">
+                <section id="flex-direction">
+                    <h2>Flex-direction</h2>
+                    <article>
+                        <h3>flex-direction: row</h3>
+                        <div>
+                            <div><p>Start</p><div>
+                            <div><p>Item 1</p><div>
+                            <div><p>Item 2</p><div>
+                            <div><p>Item 3</p><div>
+                            <div><p>End</p><div>
+                        </div>
+                    </article>
+                    <article>
+                        <h3>flex-direction: row-reverse</h3>
+                        <div>
+                            <div><p>Start</p><div>
+                            <div><p>Item 1</p><div>
+                            <div><p>Item 2</p><div>
+                            <div><p>Item 3</p><div>
+                            <div><p>End</p><div>
+                        </div>
+                    </article>
+                    <article>
+                        <h3>flex-direction: column</h3>
+                        <div>
+                            <div><p>Start</p><div>
+                            <div><p>Item 1</p><div>
+                            <div><p>Item 2</p><div>
+                            <div><p>Item 3</p><div>
+                            <div><p>End</p><div>
+                        </div>
+                    </article>
+                    <article><h3>flex-direction: column-reverse</h3>
+                        <div>
+                            <div><p>Start</p><div>
+                            <div><p>Item 1</p><div>
+                            <div><p>Item 2</p><div>
+                            <div><p>Item 3</p><div>
+                            <div><p>End</p><div>
+                        </div></article>
                 </section>
-            <section id="justify-content">
-                <h2>Justify-content</h2>
-                <article>
-                    <h3>justify-content: flex-start</h3>
-                    <div>
-                        <div><p>Start</p><div>
-                        <div><p>Item 1</p><div>
-                        <div><p>Item 2</p><div>
-                        <div><p>Item 3</p><div>
-                        <div><p>End</p><div>
-                    </div>
-                </article>
-                <article>
-                    <h3>justify-content: flex-center</h3>
-                    <div>
-                        <div><p>Start</p><div>
-                        <div><p>Item 1</p><div>
-                        <div><p>Item 2</p><div>
-                        <div><p>Item 3</p><div>
-                        <div><p>End</p><div>
-                    </div>
-                </article>
-                <article>
-                    <h3>justify-content: flex-end</h3>
-                    <div>
-                        <div><p>Start</p><div>
-                        <div><p>Item 1</p><div>
-                        <div><p>Item 2</p><div>
-                        <div><p>Item 3</p><div>
-                        <div><p>End</p><div>
-                    </div>
-                </article>
-            </section>
+                <section id="flex-wrap">
+                    <h2>Flex-wrap</h2>
+                    <article>
+                        <h3>flex-wrap: nowrap</h3>
+                        <div>
+                            <div><p>Start</p><div>
+                            <div><p>Item 1</p><div>
+                            <div><p>Item 2</p><div>
+                            <div><p>Item 3</p><div>
+                            <div><p>End</p><div>
+                        </div>
+                    </article>
+                    <article>
+                        <h3>flex-wrap: wrap</h3>
+                        <div>
+                            <div><p>Start</p><div>
+                            <div><p>Item 1</p><div>
+                            <div><p>Item 2</p><div>
+                            <div><p>Item 3</p><div>
+                            <div><p>End</p><div>
+                        </div>
+                    </article>
+                    <article>
+                        <h3>flex-wrap: wrap-reverse</h3>
+                        <div>
+                            <div><p>Start</p><div>
+                            <div><p>Item 1</p><div>
+                            <div><p>Item 2</p><div>
+                            <div><p>Item 3</p><div>
+                            <div><p>End</p><div>
+                        </div>
+                    </article>
+                    </section>
+                <section id="justify-content">
+                    <h2>Justify-content</h2>
+                    <article>
+                        <h3>justify-content: flex-start</h3>
+                        <div>
+                            <div><p>Start</p><div>
+                            <div><p>Item 1</p><div>
+                            <div><p>Item 2</p><div>
+                            <div><p>Item 3</p><div>
+                            <div><p>End</p><div>
+                        </div>
+                    </article>
+                    <article>
+                        <h3>justify-content: flex-center</h3>
+                        <div>
+                            <div><p>Start</p><div>
+                            <div><p>Item 1</p><div>
+                            <div><p>Item 2</p><div>
+                            <div><p>Item 3</p><div>
+                            <div><p>End</p><div>
+                        </div>
+                    </article>
+                    <article>
+                        <h3>justify-content: flex-end</h3>
+                        <div>
+                            <div><p>Start</p><div>
+                            <div><p>Item 1</p><div>
+                            <div><p>Item 2</p><div>
+                            <div><p>Item 3</p><div>
+                            <div><p>End</p><div>
+                        </div>
+                    </article>
+                </section>
+            </div>
         </main>
         <footer>
             <div><p>Работа выполнена студентом группы ИП-317: Сперанским Артёмом Александровичем</p><div>
