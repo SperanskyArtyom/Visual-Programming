@@ -4,7 +4,7 @@
     --footer-bg: rgb(232, 232, 232);
     
     --header-color: white;
-    --header-link-color: rgb(26, 32, 40);
+    --header-button-color: rgb(26, 32, 40);
     --main-color: rgb(38, 38, 38);
     --main-link-color: rgb(27, 84, 221);
 
@@ -30,7 +30,7 @@ html, body{
 body{
     min-height: 100%;
     display: grid;
-    grid-template-rows: [header] 1100px [main] auto [footer] auto;
+    grid-template-rows: [header] 1100px [main] auto [footer] 300px;
     color: var(--main-color);
 }
 
@@ -41,7 +41,8 @@ section{
 
 @media screen and (max-width: 768px){
     body{
-        grid-template-rows: [header] auto [main] auto [footer] 180px;
+        grid-template-rows: [header] auto [main] auto [footer] auto;
+        min-width: 100%;
     }
     section{
         grid-template-columns: none;
@@ -58,23 +59,24 @@ section{
 }
 
 .header-wrapper div{
-    padding: 32px 8vw 32px 8vw;
+    padding: 32px 128px 32px 128px;
 }
 
 .header-wrapper{
     h1, h2, img, p{
         padding-bottom: 32px;
     }
+    h2{
+        font-size: 32px;
+    }
+    p{
+        font-size: 16;
+    }
 }
 
 .header-img{
-    width: 480px;
-    height: 270px;
+    width: 720px;
 }
-
-/* .header-wrapper h1, .header-wrapper h2, .header-wrapper img, .{
-    padding-bottom: 32px
-} */
 
 .logo{
     font-family: var(--logo-font);
@@ -85,5 +87,58 @@ section{
 }
 
 img.icon{
-    width: 128px;
+    width: 64px;
+}
+
+button{
+    width: 110px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.header-wrapper button{
+    background-color: var(--main-bg);
+    color: var(--header-button-color);
+}
+
+.main-wrapper button{
+    background-color: var(--header-bg);
+    color: var(--header-color);
+}
+
+.main-wrapper{
+    padding: 32px 16vw 32px 16vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-wrapper section{
+    padding-bottom: 32px;
+}
+
+.main-wrapper a{
+    color: var(--main-link-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.section-flex-block{
+    display: flex;
+}
+
+.footer-wrapper{
+    background: var(--footer-bg);
+    justify-items: center;
+    text-align: center;
+    padding: 32px;
+}
+.footer-wrapper{
+
+    .social-media, p{
+        margin-bottom: 32px;
+    }
 }
