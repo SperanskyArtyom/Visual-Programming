@@ -1,0 +1,89 @@
+:root{
+    --header-bg: rgb(27, 84, 221);
+    --main-bg: white;
+    --footer-bg: rgb(232, 232, 232);
+    
+    --header-color: white;
+    --header-link-color: rgb(26, 32, 40);
+    --main-color: rgb(38, 38, 38);
+    --main-link-color: rgb(27, 84, 221);
+
+    --icon-color: rgb(26, 32, 40);
+
+    --logo-font: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --main-font: "Inter", serif;
+}
+
+*{
+    margin: 0;
+    border: none;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: [header] 1100px [main] auto [footer] auto;
+    color: var(--main-color);
+}
+
+section{
+    display: grid;
+    grid-template-columns: [image] 1fr [text-block] 1fr;
+}
+
+@media screen and (max-width: 768px){
+    body{
+        grid-template-rows: [header] auto [main] auto [footer] 180px;
+    }
+    section{
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+    }
+}
+
+.header-wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--header-bg);
+    color: var(--header-color);
+    text-align: center;
+}
+
+.header-wrapper div{
+    padding: 32px 8vw 32px 8vw;
+}
+
+.header-wrapper{
+    h1, h2, img, p{
+        padding-bottom: 32px;
+    }
+}
+
+.header-img{
+    width: 480px;
+    height: 270px;
+}
+
+/* .header-wrapper h1, .header-wrapper h2, .header-wrapper img, .{
+    padding-bottom: 32px
+} */
+
+.logo{
+    font-family: var(--logo-font);
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 54px;
+    text-align: center;
+}
+
+img.icon{
+    width: 128px;
+}
