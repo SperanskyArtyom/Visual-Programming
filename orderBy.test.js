@@ -1,34 +1,18 @@
-const orderBy = require('./orderBy');
+const getFields = require('./getFields');
 
-describe('orderBy', () => {
-    test('should sort array of objects by specified properties', () => {
+    test('should return an array of keys', () => {
         const array = [
-            { name: 'Alice', age: 30 },
-            { name: 'Bob', age: 25 },
-            { name: 'Alice', age: 25 },
+            {
+                name : 'a1',
+                age : 1,
+            },
+            {
+                name: 'a2',
+                age : 2,
+            },
         ];
 
-        const expected = [
-            { name: 'Alice', age: 25 },
-            { name: 'Alice', age: 30 },
-            { name: 'Bob', age: 25 },
-        ];
+        const expected = [1, 2];
 
-        expect(orderBy(array, ['name', 'age'])).toStrictEqual(expected);
+        expect(getFields(array, 'age')).toStrictEqual(expected);
     });
-
-    test('should throw error if first argument is not an array of objects', () => {
-        expect(() => orderBy(null, ['name'])).toThrow('First argument should be an Array of objects');
-        expect(() => orderBy([1, 2, 3], ['name'])).toThrow('First argument should be an Array of objects');
-        expect(() => orderBy([{}, {}, 'not an object'], ['name'])).toThrow('First argument should be an Array of objects');
-    });
-
-    test('should throw error if property is not present in all objects', () => {
-        const array = [
-            { name: 'Alice', age: 30 },
-            { name: 'Alice' },  // Нет свойства age
-        ];
-
-        expect(() => orderBy(array, ['name', 'age'])).toThrow(`Not every object contains the property 'age'`);
-    });
-});
