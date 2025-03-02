@@ -13,3 +13,5 @@ async function loadData() {
     } while (url);
     return data;
 }
+
+module.exports = loadData;
