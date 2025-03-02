@@ -1,15 +1,9 @@
-const loadData = require('./loadData');
+const loadDataModule = require('./loadData');
 const calcStats = require('./calcStats');
 
 async function calcStatsFromAPI() {
-    try {
-        const catsInfo = await loadData();
-        const stats = calcStats(catsInfo);
-        return stats;
-    } catch (error) {
-        console.error('Ошибка при загрузке данных или вычислении статистики:', error);
-        throw error;
-    }
+    const catsInfo = await loadDataModule.loadData();
+    return calcStats(catsInfo);
 }
 
 module.exports = calcStatsFromAPI;

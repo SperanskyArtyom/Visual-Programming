@@ -3,9 +3,6 @@ async function loadData() {
     let url = "https://catfact.ninja/breeds";
     do{
     let response = await fetch(url);
-    if (!response.ok) {
-        throw new Error('HTTP error! status: ${response.status}'); // Обработка ошибок
-    }
     let json = await response.json();
     for (let item of json["data"])
         data.push(item);
@@ -14,4 +11,4 @@ async function loadData() {
     return data;
 }
 
-module.exports = loadData;
+module.exports.loadData = loadData;
