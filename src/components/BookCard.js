@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import loadImage from "./loadImage";
+import loadImage from "../services/loadImage";
 
 function BookCard(props){
     const [image, setImage] = useState('no-image.png');

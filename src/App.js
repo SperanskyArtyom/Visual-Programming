@@ -1,5 +1,5 @@
-import loadBooks from "./loadBooks";
-import BookCard from "./BookCard";
+import loadBooks from "./services/loadBooks";
+import BookCard from "./components/BookCard";
 import { useEffect, useState } from "react";
 
 function App() {
