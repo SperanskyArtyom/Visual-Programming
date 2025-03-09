@@ -18,10 +18,10 @@ function App() {
     <div className="cards">
       {books.map(book => (
         <BookCard
-        key={book.title}
-        image={book.image}
-        title={book.title}
-        authors={book.authors}/>
+          key={book.title}
+          isbn={book.isbn}
+          title={book.title}
+          authors={book.authors}/>
       ))}
     </div>
   );
