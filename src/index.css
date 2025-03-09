@@ -3,11 +3,39 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+div.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+div.book-card{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  height: auto;
+  text-align: left;
+}
+
+div.book-card img{
+  width: 100%;
+}
+
+div.book-card h2{
+  font-size: 150%;
+  margin: 10px 0;
+}
+
+div.book-card p{
+  font-size: 100%;
+  color: gray,
 }

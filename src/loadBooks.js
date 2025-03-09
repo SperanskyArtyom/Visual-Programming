@@ -11,11 +11,10 @@ async function loadBooks() {
             image = imageData.items[0].volumeInfo.imageLinks.thumbnail;
         }
         else {
-            image = false;
+            image = 'no-image.png';
         }
         books.push({image, 'title' : item.title, 'authors' : item.authors})
     }
-    console.log(books);
     
     return books;
 }
