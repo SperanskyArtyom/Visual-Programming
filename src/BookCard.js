@@ -1,22 +1,12 @@
 import { useEffect, useState } from "react";
-
-let delay = 0;
+import loadImage from "./loadImage";
 
 function BookCard(props){
     const [image, setImage] = useState('no-image.png');
     useEffect(() => {
         const fetchImage = async () => {
-            let url = `https://www.googleapis.com/books/v1/volumes?q=isbn:${props.isbn}`;
-            let imageResponse = await fetch(url);
-            if(imageResponse.status === 429){
-                setTimeout(fetchImage, 1000 + 100*delay++);
-                return;
-            }
-            delay = 0;
-            let imageData = await imageResponse.json();
-            if (imageData.items && imageData.items[0].volumeInfo.imageLinks) {
-                setImage(imageData.items[0].volumeInfo.imageLinks.thumbnail);
-            }
+            const imageUrl = await loadImage(props.isbn);
+            setImage(imageUrl);
         };
         fetchImage();
     }, [props.isbn]);
