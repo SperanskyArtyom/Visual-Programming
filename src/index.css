@@ -28,6 +28,7 @@ div.book-card{
 
 div.book-card img{
   width: 100%;
+  height: 250px;
 }
 
 div.book-card h2{
